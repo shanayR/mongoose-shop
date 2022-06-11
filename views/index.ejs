@@ -13,7 +13,6 @@
         </tr>
     </thead>
     <tbody>
-        <!-- <% for(let user of userData){ %> -->
             <tr>
                 <td>
                     1
@@ -22,7 +21,7 @@
                     LED
                 </td>
                 <td>
-                    Image
+                    <img src="../public/images/led.webp">
                 </td>
                 <td>
                     uhdiudid
@@ -34,12 +33,12 @@
                     8
                 </td>
                 <td>
-                    <a href="http://localhost:8080/items/update/<%=user._id%>" class="edit"
+                    <a href="http://localhost:8080/products/update/>" class="edit"
                         data-toggle="modal">Edit</a>
-                    <a href="http://localhost:8080/delete/<%=user._id%>" class="delete">Delete</i></a>
+                    <a href="http://localhost:8080/delete>" class="delete">Delete</i></a>
                 </td>
             </tr>
-            <!-- <% } %> -->
+
     </tbody>
 </table>
 </html>
