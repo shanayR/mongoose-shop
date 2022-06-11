@@ -1,17 +1,25 @@
 <%- include('include/header'); %>
 <h1>Add Product</h1>
-<form action="/users/add" method="POST">
+<form action="/products/add" method="POST">
     <div>
-        <label for="">Product</label>
-        <input type="text" name="name" placeholder="Enter your product name">
+        <label for="">Poduct</label>
+        <input type="name" name="image">
     </div>
     <div>
-        <label for="">Color</label>
-        <input type="email" name="email" placeholder="Enter your product color">
+        <label for="">Image</label>
+        <input type="image" name="product">
     </div>
     <div>
-        <label for="">Brand</label>
-        <input type="password" name="password" placeholder="Enter your product brand">
+        <label for="">Description</label>
+        <input type="text" name="description">
+    </div>
+    <div>
+        <label for="">Category</label>
+        <input type="text" name="category">
+    </div>
+    <div>
+        <label for="">Availible Quantity</label>
+        <input type="number" name="quantity">
     </div>
     <div>
         <input type="submit" value="Submit">

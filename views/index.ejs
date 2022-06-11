@@ -1,5 +1,48 @@
 <%- include('include/header'); %>
 <h1>Home</h1>
+<table >
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Availible Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <% for(let user of userData){ %> -->
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    LED
+                </td>
+                <td>
+                    Image
+                </td>
+                <td>
+                    uhdiudid
+                </td>
+                <td>
+                    Electric
+                </td>
+                <td>
+                    4
+                </td>
+                <td>
+                    <a href="http://localhost:8080/items/update/<%=user._id%>" class="edit"
+                        data-toggle="modal">Edit</a>
+                    <a href="http://localhost:8080/delete/<%=user._id%>" class="delete">Delete</i></a>
+                </td>
+            </tr>
+            <!-- <% } %> -->
+    </tbody>
+</table>
+</html>
 
 </body>
 </html>
