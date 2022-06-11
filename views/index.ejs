@@ -1,11 +1,11 @@
 <%- include('include/header'); %>
 <h1>Home</h1>
-<table >
+<table>
     <thead>
         <tr>
             <th>Id</th>
-            <th>Image</th>
             <th>Product</th>
+            <th>Image</th>
             <th>Description</th>
             <th>Category</th>
             <th>Availible Quantity</th>
@@ -15,33 +15,37 @@
     <tbody>
             <tr>
                 <td>
-                    1
+                    <p>1</p>
                 </td>
                 <td>
-                    LED
+                    <p>LED</p>
                 </td>
                 <td>
                     <img src="/static/images/led.webp">
                 </td>
                 <td>
-                    uhdiudid
+                    <p>uhdiudid</p>
                 </td>
                 <td>
-                    Electric
+                    <p>Electric</p>
                 </td>
                 <td>
-                    8
+                    <p>8</p>
                 </td>
                 <td>
-                    <a href="http://localhost:8080/products/update/>" class="edit"
-                        data-toggle="modal">Edit</a>
-                    <a href="http://localhost:8080/delete>" class="delete">Delete</i></a>
+                    <div class="edit-btn">
+                        <a href="http://localhost:8080/products/update" class="edit">Edit</a>
+                    </div>
+                    <div class="edit-btn">
+                        <a href="http://localhost:8080/delete" class="edit">Delete</a>
+                    </div>
                 </td>
             </tr>
-
-    </tbody>
-</table>
-</html>
+        </tbody>
+    </table>
+    <div class="add-btn">
+        <a href="http://localhost:8080/products/add" class="add">Add</a>
+    </div>
 
 </body>
 </html>

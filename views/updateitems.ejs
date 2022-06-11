@@ -1,0 +1,30 @@
+<%- include('include/header'); %>
+<h1>Update Product</h1>
+<form action="/products/add" method="POST">
+    <div>
+        <label for="">Product</label>
+        <input type="name" name="product">
+    </div>
+    <div>
+        <label for="">Image</label>
+        <input type="image" name="image">
+    </div>
+    <div>
+        <label for="">Description</label>
+        <input type="text" name="description">
+    </div>
+    <div>
+        <label for="">Category</label>
+        <input type="text" name="category">
+    </div>
+    <div>
+        <label for="">Available Quantity</label>
+        <input type="number" name="quantity">
+    </div>
+    <div>
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+</body>
+</html>
