@@ -21,7 +21,6 @@ const productSchema = new mongoose.Schema({
     }
   });
 
-
 // The alternative to the export model pattern is the export schema pattern.
 const products = mongoose.model('products ', productSchema);
 
