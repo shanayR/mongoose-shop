@@ -1,12 +1,15 @@
-import { dbConnection,ObjectId } from "../database/connection.js"
+// import { dbConnection,ObjectId } from "../database/connection.js"
 
 const homeView = (req,res) => {
-    dbConnection().then((client) => {
-        const usersCollection = client.db('store').collection('users');
-        usersCollection.find({}).toArray((err, userData) => {
-            res.render('read', { userData });
-        });
-    });
-}
+        res.render('index')
+};
 
-export {renderForm , createUser,updateUser,updateForm,homeView,deleteUser}
+const addView = (req,res) => {
+    res.render('additems')
+};
+
+const updateView = (req,res) => {
+    res.render('updateitems')
+};
+
+export {homeView,addView,updateView}
