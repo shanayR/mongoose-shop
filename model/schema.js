@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
     id: {
-        type: Schema.Types.ObjectId
+        type: mongoose.Schema.Types.ObjectId
     },
     name: {
         type: String
@@ -18,7 +18,7 @@ const productSchema = new mongoose.Schema({
         type: Decimal128
     },
     category: {
-        type: Schema.Types.ObjectId, ref: 'Category'
+        type: mongoose.Schema.Types.ObjectId, ref: 'Category'
     },
     available_qty: {
         type: Number
@@ -27,7 +27,7 @@ const productSchema = new mongoose.Schema({
 
 const categorySchema = new mongoose.Schema({
     id: {
-        type: Schema.Types.ObjectId
+        type: mongoose.Schema.Types.ObjectId
     },
     name: {
         type: String
@@ -39,13 +39,13 @@ const categorySchema = new mongoose.Schema({
 
 const orderSchema =  new mongoose.Schema({
     id: {
-        type: Schema.Types.ObjectId
+        type: mongoose.Schema.Types.ObjectId
     },
     order_no: {
         type: Number
     },
     product_name: {
-        type: Schema.Types.ObjectId , ref: 'Product'
+        type: mongoose.Schema.Types.ObjectId , ref: 'Product'
     },
     quantity: {
         type: Number

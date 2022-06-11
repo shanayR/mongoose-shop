@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from 'dotenv/config';
 import {router} from './route/router.js';
 import path from 'path';
+import {dbData} from './database/connection.js'
 
 const app = express();
 const port = process.env.API_PORT;

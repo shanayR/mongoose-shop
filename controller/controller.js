@@ -1,4 +1,4 @@
-// import { dbConnection,ObjectId } from "../database/connection.js"
+import  { Product,Category,Order } from '../model/schema.js'
 
 const homeView = (req,res) => {
         res.render('index')
@@ -11,5 +11,9 @@ const addView = (req,res) => {
 const updateView = (req,res) => {
     res.render('updateitems')
 };
+const deleteView = (req,res) => {
+    res.redirect('/products')
+};
 
-export {homeView,addView,updateView}
+
+export {homeView,addView,updateView ,deleteView}
