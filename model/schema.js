@@ -1,3 +1,4 @@
+import { Decimal128 } from "mongodb";
 import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
@@ -12,6 +13,9 @@ const productSchema = new mongoose.Schema({
     },
     image:{
         binData: Buffer
+    },
+    price:{
+        type: Decimal128
     },
     category: {
         type: Schema.Types.ObjectId, ref: 'Category'
@@ -45,7 +49,7 @@ const orderSchema =  new mongoose.Schema({
     },
     quantity: {
         type: Number
-    }
+    },
     total_amount: {
         type: Decimal128
     }
@@ -56,4 +60,4 @@ const orderSchema =  new mongoose.Schema({
 const Product = mongoose.model('Product ', productSchema);
 const Category = mongoose.model('Category ', categorySchema);
 
-export { products }
+export { Product }

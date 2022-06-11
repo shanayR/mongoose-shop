@@ -1,6 +1,5 @@
 import express from "express";
 import { homeView ,addView,updateView } from "../controller/controller.js";
-
 const app = express();
 const router = express.Router();
 
