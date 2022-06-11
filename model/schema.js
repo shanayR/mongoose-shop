@@ -59,5 +59,6 @@ const orderSchema =  new mongoose.Schema({
 // The alternative to the export model pattern is the export schema pattern.
 const Product = mongoose.model('Product ', productSchema);
 const Category = mongoose.model('Category ', categorySchema);
+const Order = mongoose.model('Order ', orderSchema);
 
-export { Product }
+export { Product,Category,Order }
