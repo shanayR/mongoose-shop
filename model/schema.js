@@ -2,9 +2,9 @@ import { Decimal128 } from "mongodb";
 import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
-    id: {
-        type: mongoose.Schema.Types.ObjectId
-    },
+    // id: {
+    //     type: mongoose.Schema.Types.ObjectId
+    // },
     name: {
         type: String
     },
@@ -18,7 +18,8 @@ const productSchema = new mongoose.Schema({
         type: Decimal128
     },
     category: {
-        type: mongoose.Schema.Types.ObjectId, ref: 'Category'
+        // type: mongoose.Schema.Types.ObjectId, ref: 'Category'
+        type:String
     },
     available_qty: {
         type: Number
@@ -26,9 +27,9 @@ const productSchema = new mongoose.Schema({
   });
 
 const categorySchema = new mongoose.Schema({
-    id: {
-        type: mongoose.Schema.Types.ObjectId
-    },
+    // id: {
+    //     type: mongoose.Schema.Types.ObjectId
+    // },
     name: {
         type: String
     },
@@ -38,9 +39,9 @@ const categorySchema = new mongoose.Schema({
 })
 
 const orderSchema =  new mongoose.Schema({
-    id: {
-        type: mongoose.Schema.Types.ObjectId
-    },
+    // id: {
+    //     type: mongoose.Schema.Types.ObjectId
+    // },
     order_no: {
         type: Number
     },

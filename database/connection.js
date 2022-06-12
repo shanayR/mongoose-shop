@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 //Connection with mongo with Mongoose.
-const dbData = () => {
+const dbConnection = () => {
     try {
       const connect = mongoose.connect(process.env.DATABASE_URI, {
         useNewUrlParser: true,
@@ -15,4 +15,4 @@ const dbData = () => {
   }
 
 
-  export { dbData };
+  export { dbConnection };
