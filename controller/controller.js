@@ -12,10 +12,10 @@ const addView = (req,res) => {
 };
 
 const updateView = (req,res) => {
-    const productData = Product.findOne({
-        _id: req.params.id
-    });
-    console.log(productData)
+    // const productData = Product.findOne({
+    //     _id: req.params.id
+    // });
+    // console.log(productData)
     res.render('updateitems')
 };
 // crud
