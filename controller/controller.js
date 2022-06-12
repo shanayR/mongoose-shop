@@ -19,8 +19,8 @@ const updateView = (req,res) => {
     res.render('updateitems')
 };
 // crud
-const addProduct = (req,res) => {
-    const product = new Product({
+const addProduct = async  (req,res) => {
+    const product = await new Product({
         name: req.body.name,
         description: req.body.description,
         image: req.body.image,
@@ -28,7 +28,7 @@ const addProduct = (req,res) => {
         category:req.body.category,
         available_qty:req.body.quantity,
     })
-    product.save(product).then((data) => {
+    product.save(product).then(data => {
         console.log(data);
         res.redirect('/products');
     });

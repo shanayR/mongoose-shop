@@ -15,7 +15,7 @@ const productSchema = new mongoose.Schema({
         binData: Buffer
     },
     price:{
-        type: Decimal128
+        type: Number
     },
     category: {
         // type: mongoose.Schema.Types.ObjectId, ref: 'Category'
@@ -52,7 +52,7 @@ const orderSchema =  new mongoose.Schema({
         type: Number
     },
     total_amount: {
-        type: Decimal128
+        type: Number
     }
 })
   
@@ -62,4 +62,11 @@ const Product = mongoose.model('Product ', productSchema);
 const Category = mongoose.model('Category ', categorySchema);
 const Order = mongoose.model('Order ', orderSchema);
 
+const product1 = new Product({
+    name:"testing1",
+    price: 12.5,
+
+})
+product1.save();
+console.log(product1);
 export { Product,Category,Order }
