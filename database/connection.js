@@ -12,10 +12,7 @@ const dbConnection = () => {
     //   console.log(err);
     //   process.exit(1)
     // }
-    mongoose.connect(process.env.DATABASE_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true,})   
+    mongoose.connect(process.env.DATABASE_URI)   
       .then(() => console.log("Database connected!"))
       .catch(err => console.log(err));
   }
