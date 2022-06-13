@@ -1,4 +1,4 @@
-import  { Product,Category,Order } from '../model/schema.js'
+import  { Product } from '../model/schema.js'
 import mongoose from 'mongoose';
 import {dbConnection} from '../database/connection.js'
 
@@ -19,8 +19,9 @@ const updateView = (req,res) => {
     res.render('updateitems')
 };
 // crud
-const addProduct = async  (req,res) => {
-    const product = await new Product({
+const addProduct =  (req,res) => {
+    const product = new Product({
+
         name: req.body.name,
         description: req.body.description,
         image: req.body.image,
@@ -28,10 +29,10 @@ const addProduct = async  (req,res) => {
         category:req.body.category,
         available_qty:req.body.quantity,
     })
-    product.save(product).then(data => {
+    product.save(product).then(data =>{
         console.log(data);
-        res.redirect('/products');
-    });
+        res.redirect("/products")
+    })
 }
 const deleteView = (req,res) => {
     res.redirect('/products')
