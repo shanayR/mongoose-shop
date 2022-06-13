@@ -25,19 +25,22 @@
                     <p><%= no %></p>
                 </td>
                 <td>
-                    <p><% product.name %></p>
+                    <p><%= product.name %></p>
                 </td>
                 <td>
-                    <img src="/static/images/led.webp">
+                    <img src="/static/images/<%= product.image %>">
                 </td>
                 <td>
-                    <p>uhdiudid</p>
+                    <p><%= product.description %></p>
                 </td>
                 <td>
-                    <p>Electric</p>
+                    <p><%= product.category %></p>
                 </td>
                 <td>
-                    <p>8</p>
+                    <p><%= product.price %></p>
+                </td>
+                <td>
+                    <p><%= product.available_qty %></p>
                 </td>
                 <td>
                     <div class="edit-btn">
