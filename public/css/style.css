@@ -19,9 +19,9 @@ font-size: 14px;
 text-align: center;
 }
 form, table{
-    /* max-width: 650px; */
     margin: auto;
 }
+form{max-width: 650px;}
 
 table tr td, table tr th {
     padding: 10px 15px;

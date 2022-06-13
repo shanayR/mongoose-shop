@@ -1,10 +1,12 @@
-import  { Product } from '../model/schema.js'
+import  { Product,Category,Order } from '../model/schema.js'
 import mongoose from 'mongoose';
 import {dbConnection} from '../database/connection.js'
 
 //render pages
 const homeView = (req,res) => {
-        res.render('index')
+    Product.find().then(productData => {
+        res.render('index',{productData})
+    })
 };
 
 const addView = (req,res) => {

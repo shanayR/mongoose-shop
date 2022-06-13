@@ -14,12 +14,18 @@
         </tr>
     </thead>
     <tbody>
+        <% 
+        
+        for (let product of productData){ 
+            let no = 1;
+            %>
+
             <tr>
                 <td>
-                    <p>1</p>
+                    <p><%= no %></p>
                 </td>
                 <td>
-                    <p>LED</p>
+                    <p><% product.name %></p>
                 </td>
                 <td>
                     <img src="/static/images/led.webp">
@@ -42,6 +48,8 @@
                     </div>
                 </td>
             </tr>
+        <%   no++
+          } %>
         </tbody>
     </table>
     <div class="add-btn">
