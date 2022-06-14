@@ -10,6 +10,7 @@
             <th>Description</th>
             <th>Category</th>
             <th>Availible Quantity</th>
+            <th>Price</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -28,7 +29,7 @@
                     <p><%= product.name %></p>
                 </td>
                 <td>
-                    <img src="/static/images/<%= product.image %>">
+                    <img src="/static/images/led.webp">
                 </td>
                 <td>
                     <p><%= product.description %></p>
@@ -37,7 +38,7 @@
                     <p><%= product.category %></p>
                 </td>
                 <td>
-                    <p><%= product.price %></p>
+                    <p>$<%= product.price %></p>
                 </td>
                 <td>
                     <p><%= product.available_qty %></p>
